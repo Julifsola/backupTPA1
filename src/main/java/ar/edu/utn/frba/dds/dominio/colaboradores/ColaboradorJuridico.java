@@ -33,13 +33,12 @@ public class ColaboradorJuridico implements Colaborador {
         this.direccion = nuevaDireccion;
     }
 
-
-    public ColaboradorJuridico(){
-        razonSocial = null;
-        tipo = null;
-        rubro = null;
-        contacto  = null;
-        direccion = null;
+    public ColaboradorJuridico(String razonSocial, TipoJuridico tipo, String rubro, Contacto contacto, Ubicacion direccion,ColaboracionJuridica colaboracion){
+        this.razonSocial = razonSocial;
+        this.tipo = tipo;
+        this.rubro = rubro;
+        this.contacto  = contacto;
+        this.direccion = direccion;
     }
 
     @Override

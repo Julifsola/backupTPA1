@@ -29,8 +29,5 @@ public class DonacionDinero implements ColaboracionHumana, ColaboracionJuridica{
         scan.close();
     }
 
-    @Override
-    public void colaborar() {
-        this.solicitarDatos();
-    }
+    
 }

@@ -17,8 +17,4 @@ public class DonacionVianda implements ColaboracionHumana{
         }
     }
 
-    @Override
-    public void colaborar() {
-        this.solicitarDatos();
-    }
 }

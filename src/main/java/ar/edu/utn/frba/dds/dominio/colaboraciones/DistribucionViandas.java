@@ -10,7 +10,15 @@ public class DistribucionViandas implements ColaboracionHumana{
     private Heladera heladeraDestino;
     private int cantidadViandas;
     private MotivoDistribucionVianda motivo;
-    private LocalDate fecha = LocalDate.now();
+    private LocalDate fecha;
+
+    public DistribucionViandas(Heladera heladeraOrigen,Heladera heladeraDestino,int cantidadViandas,MotivoDistribucionVianda motivo, LocalDate unaFecha) {
+        this.heladeraOrigen = heladeraOrigen;
+        this.heladeraDestino =  heladeraDestino;
+        this.cantidadViandas = cantidadViandas;
+        this.motivo = motivo;
+        this.fecha = unaFecha;
+    }
 
     public void solicitarDatos(){
         Scanner scan = new Scanner(System.in);
@@ -42,8 +50,4 @@ public class DistribucionViandas implements ColaboracionHumana{
         scan.close();
     }
 
-    @Override
-    public void colaborar() {
-        this.solicitarDatos();
-    }
 }

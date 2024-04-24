@@ -19,6 +19,14 @@ public class Usuario{
         colaborador= null;
     }
 
+    /*
+    public Usuario(String unUsername, String unaPassword, Colaborador unColaborador){
+        username = unUsername;
+        password = nulunaPasswordl;
+        colaborador= unColaborador;
+    }
+    */
+   
     public String getUsername(){
         return username;
     }
@@ -77,12 +85,12 @@ public class Usuario{
 
         switch(scan.nextInt()){
             case 1:
-                ColaboradorHumana auxColabH = new ColaboradorHumana();
-                auxColabH.completarFormulario();
-                user.setColaborador(auxColabH);
-                break;
-            case 2:
-                ColaboradorJuridico auxColabJ= new ColaboradorJuridico();
+                ColaboradorHumana auxColabH = new ColaboradorHumana(null,null,null,null,null);                //
+                auxColabH.completarFormulario();                                                                                                         //               
+                user.setColaborador(auxColabH);                                                                                                         //                  
+                break;                                                                                                                                 //
+            case 2:                                                                                                                                   //
+                ColaboradorJuridico auxColabJ= new ColaboradorJuridico(null,null,null,null,null,null);   //
                 auxColabJ.completarFormulario();
                 user.setColaborador(auxColabJ);
                 break;

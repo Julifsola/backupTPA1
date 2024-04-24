@@ -14,9 +14,9 @@ public class Heladera {
     private Organizacion org;
 
     public Heladera(String nombre,Ubicacion ubicacion,int capacidad ,LocalDate unaFechaEstreno){
-        if(nombre.equals("") || ubicacion == null || capacidad <= 0){
-            throw new RuntimeException("Porfavor, Ingrese datos validos");
-        }
+        //if(nombre.equals("") || ubicacion == null || capacidad <= 0){
+        //    throw new RuntimeException("Porfavor, Ingrese datos validos");
+        //}
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         this.capacidad = capacidad;
@@ -92,7 +92,9 @@ public class Heladera {
         return viandas.remove(0);
     }
 
-
+    public void registrarHeladeraEnOrganizacion() {
+        org.altaHeladera(this);
+    }
 
     public String getNombre(){
         return nombre;

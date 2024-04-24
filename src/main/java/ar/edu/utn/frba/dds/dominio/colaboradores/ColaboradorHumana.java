@@ -33,12 +33,12 @@ public class ColaboradorHumana implements Colaborador{
         this.direccion = direccion;
     }
  
-    public ColaboradorHumana(){
-        this.nombre = null;
-        this.apellido = null;
-        this.contacto = null;
-        this.fechaDeNacimiento = null;
-        this.direccion = null;
+    public ColaboradorHumana(String nombre,String apellido,Contacto contacto,LocalDate fechaDeNacimiento,Ubicacion direccion){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.contacto = contacto;
+        this.fechaDeNacimiento = fechaDeNacimiento;
+        this.direccion = direccion;
     }
 
     
@@ -53,7 +53,6 @@ public class ColaboradorHumana implements Colaborador{
         this.apellido = scan.nextLine();
 
         this.setContacto(contacto.cargarContactos());
-
 
         System.out.println("Ingrese su fecha de nacimiento: ");
         System.out.println("1. dia: ");
@@ -83,8 +82,8 @@ public class ColaboradorHumana implements Colaborador{
                 donarVianda.solicitarDatos();
                 break;
             case 3:
-                DistribucionViandas distribuirVianda = new DistribucionViandas();
-                distribuirVianda.colaborar();
+                DistribucionViandas distribuirVianda = new DistribucionViandas(null,null,null,null,null);
+                distribuirVianda.solicitarDatos();
                 break;
             default:
                 scan.close();
